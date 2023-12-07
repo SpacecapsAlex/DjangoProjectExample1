@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пользователей</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightcyan;
+        }
+        table {
+            width: 100%;
+            background-color: azure;
+        }
+        thead {
+            background-color: antiquewhite;
+            font-size: 26px;
+            text-align: center;
+        }
+        th:hover {
+            background-color: lightgray;
+            cursor: auto;
+        }
+        tbody {
+            font-size: 24px;
+        }
+        tbody tr td {
+            border-right: 1px solid darkorchid;
+            border-left: 1px solid darkorchid;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: cornflowerblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+            <th>Телефон</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td><a href="">{{ user.first_name }}</a></td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>{{ user.phone_number }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
