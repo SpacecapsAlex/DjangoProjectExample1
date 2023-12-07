@@ -39,6 +39,19 @@
             color: cornflowerblue;
             text-align: center;
         }
+        button {
+            margin-top: 20px;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+        }
+        button:hover {
+            background-color: darkslateblue;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -64,5 +77,6 @@
             {% endfor %}
         </tbody>
     </table>
+    <button onclick="history.back()">назад</button>
 </body>
 </html>
