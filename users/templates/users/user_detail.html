@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация о пользователе</title>
+    <style>
+        th {
+            text-align: left;
+            font-size: 24px;
+        }
+        input {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 500px">
+        <h1 style="text-align: center">Информация о пользователе: {{ user.first_name }}</h1>
+        <table>
+            <tr>
+                <th>Имя</th>
+                <td>
+                    <input type="text" value="{{ user.first_name }}" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>Фамилия</th>
+                <td>
+                    <input type="text" value="{{ user.last_name }}" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>Возраст</th>
+                <td>
+                    <input type="number" value="{{ user.age }}" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>Телефон</th>
+                <td>
+                    <input type="text" value="{{ user.phone_number }}" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>
+                    <input type="text" value="{{ user.email }}" disabled>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

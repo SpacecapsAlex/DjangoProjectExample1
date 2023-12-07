@@ -55,7 +55,7 @@
         <tbody>
             {% for user in users %}
                 <tr>
-                    <td><a href="">{{ user.first_name }}</a></td>
+                    <td><a href="/users/user_detail/{{ user.id }}">{{ user.first_name }}</a></td>
                     <td>{{ user.last_name }}</td>
                     <td>{{ user.age }}</td>
                     <td>{{ user.phone_number }}</td>
